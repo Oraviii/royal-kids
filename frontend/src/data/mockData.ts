@@ -13,7 +13,7 @@ export const CATEGORIES: Category[] = [
 
 export const MENU_ITEMS: MenuItem[] = [
   // Пицца
-  { id: 1,  category_id: 1, name: 'Маргарита',        description: 'Томатный соус, моцарелла, свежие томаты, базилик',           price: 490, weight: '500г', is_available: true, is_popular: true },
+  { id: 1,  category_id: 1, name: 'Маргарита',        description: 'Томатный соус, моцарелла, свежие томаты, базилик',           price: 490, weight: '500г', is_available: true, is_popular: true, image_url: '/royal-kids/dishes/pizza-margarita.webp' },
   { id: 2,  category_id: 1, name: 'Пепперони',         description: 'Томатный соус, моцарелла, острая колбаса пепперони',          price: 550, weight: '550г', is_available: true, is_popular: true },
   { id: 3,  category_id: 1, name: 'Четыре сыра',       description: 'Моцарелла, чеддер, гауда, пармезан',                          price: 590, weight: '520г', is_available: true, is_popular: false },
   { id: 4,  category_id: 1, name: 'Ветчина и грибы',   description: 'Томатный соус, ветчина, шампиньоны, моцарелла',               price: 520, weight: '530г', is_available: true, is_popular: false },
