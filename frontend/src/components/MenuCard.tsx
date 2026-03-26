@@ -70,7 +70,7 @@ export function MenuCard({ item }: MenuCardProps) {
 
         {/* Бейдж "Популярное" */}
         {item.is_popular && (
-          <span className="absolute top-2 left-2 bg-brand-gold text-brand-dark text-xs font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
+          <span className="absolute top-2 left-2 bg-[#A8E6CF] text-[#104435] text-xs font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
             <Star size={10} fill="currentColor" />
             Хит
           </span>

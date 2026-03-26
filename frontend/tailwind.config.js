@@ -10,10 +10,10 @@ export default {
       colors: {
         // Цветовая палитра Royal Kids
         brand: {
-          red:    "#E63946",   // основной акцент
-          dark:   "#1D2B36",   // тёмный фон
-          cream:  "#FFF8F0",   // светлый фон
-          gold:   "#F4A427",   // золото (корона)
+          red:    "#104435",   // кнопки
+          dark:   "#104435",   // тёмный фон/шапка
+          cream:  "#F5F7F6",   // фон страницы
+          gold:   "#A8E6CF",   // выделение/акценты
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

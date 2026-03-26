@@ -4,21 +4,21 @@
 
 @layer base {
   :root {
-    --background: 30 100% 98%;      /* cream */
-    --foreground: 210 29% 16%;      /* dark */
+    --background: 150 14% 97%;       /* #F5F7F6 */
+    --foreground: 210 29% 16%;
     --card: 0 0% 100%;
     --card-foreground: 210 29% 16%;
-    --primary: 2 77% 57%;           /* brand red */
+    --primary: 161 62% 16%;          /* #104435 */
     --primary-foreground: 0 0% 100%;
-    --secondary: 38 90% 56%;        /* brand gold */
-    --secondary-foreground: 210 29% 16%;
-    --muted: 30 20% 94%;
+    --secondary: 149 52% 79%;        /* #A8E6CF */
+    --secondary-foreground: 161 62% 16%;
+    --muted: 150 10% 93%;
     --muted-foreground: 210 10% 50%;
-    --accent: 30 20% 94%;
-    --accent-foreground: 210 29% 16%;
-    --border: 30 15% 88%;
-    --input: 30 15% 88%;
-    --ring: 2 77% 57%;
+    --accent: 149 52% 79%;
+    --accent-foreground: 161 62% 16%;
+    --border: 150 10% 88%;
+    --input: 150 10% 88%;
+    --ring: 161 62% 16%;
     --radius: 0.75rem;
   }
 
@@ -50,16 +50,25 @@
 
   /* Кнопка добавить в корзину */
   .btn-add {
-    @apply bg-brand-red text-white rounded-xl px-4 py-2 text-sm font-semibold
-           hover:bg-red-600 active:scale-95 transition-all duration-150
+    @apply text-white rounded-xl px-4 py-2 text-sm font-semibold
+           active:scale-95 transition-all duration-150
            flex items-center gap-1.5;
+    background-color: #104435;
+  }
+  .btn-add:hover {
+    background-color: #1a5c46;
   }
 
   /* Количество в корзине */
   .qty-btn {
-    @apply w-8 h-8 rounded-lg bg-brand-red/10 text-brand-red font-bold
-           hover:bg-brand-red hover:text-white transition-colors
+    @apply w-8 h-8 rounded-lg font-bold transition-colors
            flex items-center justify-center;
+    background-color: #A8E6CF33;
+    color: #104435;
+  }
+  .qty-btn:hover {
+    background-color: #104435;
+    color: white;
   }
 }
 

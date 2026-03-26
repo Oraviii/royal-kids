@@ -17,7 +17,7 @@ export function Home() {
   return (
     <main>
       {/* ─── Hero-баннер ─────────────────────────────────────────────────────── */}
-      <section className="bg-gradient-to-br from-brand-dark via-[#1a3a50] to-[#0d2233] text-white py-10 sm:py-16">
+      <section className="bg-gradient-to-br from-[#104435] via-[#1a5c46] to-[#0a2e22] text-white py-10 sm:py-16">
         <div className="container">
           <div className="max-w-xl">
             <div className="inline-flex items-center gap-2 bg-white/10 text-white/90 rounded-full px-4 py-1.5 text-sm mb-4">
@@ -25,7 +25,7 @@ export function Home() {
             </div>
             <h1 className="text-3xl sm:text-5xl font-extrabold leading-tight mb-4">
               Вкусная еда<br />
-              <span className="text-brand-gold">с доставкой на дом</span>
+              <span className="text-[#A8E6CF]">с доставкой на дом</span>
             </h1>
             <p className="text-white/70 text-base sm:text-lg mb-6">
               Пицца, роллы, европейская кухня и детское меню.<br />
