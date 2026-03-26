@@ -1,10 +1,8 @@
-import { Plus, Minus, ShoppingCart, Star } from 'lucide-react'
+import { Plus, Minus, Star } from 'lucide-react'
 import { useCartStore } from '@/store/cartStore'
 import { formatPrice } from '@/lib/utils'
 import type { MenuItem } from '@/types'
 
-// Placeholder-иконки для блюд без фото
-const CATEGORY_PLACEHOLDERS: Record<number, string> = {}
 const EMOJI_BY_KEYWORDS: Array<[string, string]> = [
   ['пицца', '🍕'],
   ['ролл', '🍣'],
