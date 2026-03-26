@@ -1,0 +1,40 @@
+services:
+  # ─── База данных PostgreSQL ───────────────────────────────────────────────
+  postgres:
+    image: postgres:16-alpine
+    container_name: royal_kids_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: royal_kids
+      POSTGRES_USER: royal_user
+      POSTGRES_PASSWORD: royal_pass
+    ports:
+      - "5432:5432"          # доступен на localhost:5432
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U royal_user -d royal_kids"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # ─── Веб-сервер / Прокси Caddy ────────────────────────────────────────────
+  caddy:
+    image: caddy:2-alpine
+    container_name: royal_kids_caddy
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    extra_hosts:
+      # Позволяет Caddy обращаться к хосту (твоему компьютеру) по имени
+      - "host.docker.internal:host-gateway"
+
+volumes:
+  postgres_data:
+  caddy_data:
+  caddy_config:

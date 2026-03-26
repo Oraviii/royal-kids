@@ -1,0 +1,29 @@
+# Caddyfile для разработки
+# Caddy слушает порт 80 и проксирует запросы на хост-машину
+
+:80 {
+    # API запросы (/api/*) → FastAPI на порту 8000
+    handle /api/* {
+        reverse_proxy host.docker.internal:8000
+    }
+
+    # WebSocket для HMR (Hot Module Replacement) Vite
+    handle /@vite/* {
+        reverse_proxy host.docker.internal:5173
+    }
+
+    handle /__vite_* {
+        reverse_proxy host.docker.internal:5173
+    }
+
+    # Все остальные запросы → Vite dev server на порту 5173
+    handle {
+        reverse_proxy host.docker.internal:5173
+    }
+
+    # Логи для отладки
+    log {
+        output stdout
+        level INFO
+    }
+}

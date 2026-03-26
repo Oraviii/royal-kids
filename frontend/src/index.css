@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 100% 98%;      /* cream */
+    --foreground: 210 29% 16%;      /* dark */
+    --card: 0 0% 100%;
+    --card-foreground: 210 29% 16%;
+    --primary: 2 77% 57%;           /* brand red */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 38 90% 56%;        /* brand gold */
+    --secondary-foreground: 210 29% 16%;
+    --muted: 30 20% 94%;
+    --muted-foreground: 210 10% 50%;
+    --accent: 30 20% 94%;
+    --accent-foreground: 210 29% 16%;
+    --border: 30 15% 88%;
+    --input: 30 15% 88%;
+    --ring: 2 77% 57%;
+    --radius: 0.75rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto px-4 max-w-6xl;
+  }
+
+  /* Карточка блюда */
+  .menu-card {
+    @apply bg-white rounded-2xl overflow-hidden shadow-sm border border-border
+           hover:shadow-md transition-all duration-200 hover:-translate-y-0.5;
+  }
+
+  /* Кнопка добавить в корзину */
+  .btn-add {
+    @apply bg-brand-red text-white rounded-xl px-4 py-2 text-sm font-semibold
+           hover:bg-red-600 active:scale-95 transition-all duration-150
+           flex items-center gap-1.5;
+  }
+
+  /* Количество в корзине */
+  .qty-btn {
+    @apply w-8 h-8 rounded-lg bg-brand-red/10 text-brand-red font-bold
+           hover:bg-brand-red hover:text-white transition-colors
+           flex items-center justify-center;
+  }
+}
+
+/* Скроллбар */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #ddd; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #bbb; }
